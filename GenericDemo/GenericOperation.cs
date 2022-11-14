@@ -9,7 +9,7 @@ namespace GenericDemo
     public class GenericOperation
     {
         //Multiple methods for multiple Datatypes
-        public void ToPrintArray(int[] intArr)
+      /*  public void ToPrintArray(int[] intArr)
         {
             foreach(var data in intArr)
             {
@@ -29,6 +29,13 @@ namespace GenericDemo
             {
                 Console.WriteLine(data);
             }
-        }
+        }*/
+      public void ToPrintArray<T>(T[] Array)// single method for multiple datatypes using Generic
+      {
+          foreach(var data in Array)
+            {
+                Console.WriteLine(data);
+            }
+      }
     }
 }
